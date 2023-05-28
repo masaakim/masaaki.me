@@ -5,4 +5,4 @@ I'm based in Wakayama, Japan and work remotely full-time. I've been working remo
 
 At work, I'm usually the primary designer for projects or organizations that don't have one. My tasks include UI design, user research and modeling, VI/CI design for branding, graphic design for marketing, and providing support for hiring designers - all in one place.
 
-On my days off, I enjoy working on personal projects. Lately, I've been getting into typeface design and I'm currently creating a font for programming.
+On my days off, I enjoy working on personal projects. Lately, I've been getting into typeface design and font engineering.
