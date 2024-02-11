@@ -1,53 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import { Content as AboutMe } from '../content/about-me.md'
-import '../styles/mdContent.css'
+import Section from "../components/Section.astro";
+import Links from "../components/Links.astro";
+import Contact from "../components/Contact.astro";
 
-const links = [
-	{
-		name: "Code on GitHub",
-		url: "https://github.com/masaakim",
-	},
-	{
-		name: "Typeface design in 0xType",
-		url: "https://0xtype.dev",
-	},
-	{
-		name: "Works on my portfolio site (Japanese)",
-		url: "https://morishitter.com",
-	},
-]
+import { Content as AboutMe } from "../content/about-me.md";
+import "../styles/mdContent.css";
 ---
 
 <Layout>
-	<header class="mx-auto py-16 max-w-2xl px-6 lg:px-8">
-		<h1 class="text-3xl font-bold mt-12">Hi, I'm Masaaki.</h1>
-	</header>
-	<main class="mx-auto py-16 max-w-2xl px-6 lg:px-8 text-lg mb-12">
-		<section>
-			<h1 class="text-lg font-bold flex items-center -ml-12 before:content=[''] before:w-8 before:h-px before:bg-current before:mr-4">TL;DR</h1>
-			<ul class="list-disc pl-6 mt-8">
-				<li class="leading-8">Self-employed software designer</li>
-				<li class="leading-8">Full-remote from Wakayama, Japan</li>
-				<li class="leading-8">❤️ Programming & Typeface design</li>
-			</ul>
-		</section>
-		<section class="mt-16 leading-8">
-			<h1 class="text-lg font-bold flex items-center -ml-12 before:content=[''] before:w-8 before:h-px before:bg-current before:mr-4 mb-6">Bio</h1>
-			<div class="md-content">
-				<AboutMe />
-			</div>
-		</section>
-		<section class="mt-16">
-			<h1 class="text-lg font-bold flex items-center -ml-12 before:content=[''] before:w-8 before:h-px before:bg-current before:mr-4">Links</h1>
-			<ul class="list-disc pl-6 mt-8">
-				{links.map(link => (
-					<li class="leading-8">
-						<a class="hover:underline underline-offset-2" href={link.url}>{link.name}</a>
-						</li>
-				))}
-			</ul>
-		</section>
-	</main>
+  <header class="mx-auto py-16 max-w-2xl px-6 lg:px-8">
+    <h1 class="text-3xl font-bold mt-12">Hi, I'm Masaaki.</h1>
+    <p class="mt-4">❤️ FOSS & Typography</p>
+  </header>
+  <main class="mx-auto py-16 max-w-2xl px-6 lg:px-8 mb-12">
+    <Section title="Links">
+      <Links />
+    </Section>
+    <Section title="Contact">
+      <Contact />
+    </Section>
+    <Section title="About me" className="leading-8">
+      <div class="md-content">
+        <AboutMe />
+      </div>
+    </Section>
+  </main>
 </Layout>

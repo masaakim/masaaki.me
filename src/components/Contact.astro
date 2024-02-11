@@ -1,0 +1,30 @@
+---
+const contact = [
+  {
+    name: "Matrix",
+    url: "https://matrix.to/#/@matype:matrix.org",
+  },
+  {
+    name: "SimpleX",
+    url: "https://simplex.chat/contact#/?v=1-4&smp=smp%3A%2F%2FenEkec4hlR3UtKx2NMpOUK_K4ZuDxjWBO1d9Y4YXVaA%3D%40smp14.simplex.im%2Fhc1M1BjOAzKGNJOYwbHK3rGeQzNniLG8%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAuEbpG9I3ZX2wojq03lR4v2Ot9m_YjpViNdsxFKhugRo%253D%26srv%3Daspkyu2sopsnizbyfabtsicikr2s4r3ti35jogbcekhm3fsoeyjvgrid.onion",
+  },
+];
+---
+
+<ul class="list-disc pl-6 mt-8">
+  {
+    contact.map((c) => (
+      <li class="leading-8">
+        <a
+          class="text-blue-700 dark:text-lime-400 hover:underline underline-offset-2"
+          href={c.url}
+          target="_blank"
+          rel="noopener"
+        >
+          {c.name}
+        </a>
+      </li>
+    ))
+  }
+  <li class="leading-8">Mail: masaakim [shift + 2] tutanota [dot] com</li>
+</ul>
